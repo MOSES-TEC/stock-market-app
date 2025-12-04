@@ -110,12 +110,22 @@ export default function SearchCommand({ renderAs = 'button', label = 'Add stock'
                                                 {stock.symbol} | {stock.exchange } | {stock.type}
                                             </div>
                                         </div>
-                                        <Star />
+                                        {/*<Star />*/}
+                                        <WatchlistButton
+                                            symbol={stock.symbol}
+                                            company={stock.name}
+                                            isInWatchlist={false}
+                                            showTrashIcon={true}
+                                            type='icon'
+                                            // isInWatchlist={stock.isInWatchlist}
+                                            // onWatchlistChange={handleWatchlistChange}
+                                        />
                                         {/*<WatchlistButton*/}
-                                        {/*    symbol={stock.symbol}*/}
-                                        {/*    company={stock.name}*/}
-                                        {/*    isInWatchlist={stock.isInWatchlist}*/}
-                                        {/*    onWatchlistChange={handleWatchlistChange}*/}
+                                        {/*    symbol={item.symbol}*/}
+                                        {/*    company={item.company}*/}
+                                        {/*    isInWatchlist={true}*/}
+                                        {/*    showTrashIcon={true}*/}
+                                        {/*    type='icon'*/}
                                         {/*/>*/}
                                     </Link>
                                 </li>
